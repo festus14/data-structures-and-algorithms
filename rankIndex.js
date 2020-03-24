@@ -26,13 +26,3 @@ function rankIndex(values, rank) {
 
     return (outObj[rank]);
 }
-
-console.log(rankIndex(
-    [
-        [80, 96, 81, 77],
-        [80, 96, 81, 77],
-        [78, 71, 93, 75],
-        [71, 98, 70, 95],
-        [80, 96, 89, 77],
-    ],
-    3))
