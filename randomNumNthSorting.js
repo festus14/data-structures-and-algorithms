@@ -7,9 +7,11 @@ const randomNumNthSorting = (arr, index) => {
     while (left > 0 && right < arr.length) {
         if (arr[left] < pivot) {
             left--;
+            continue
         }
         if (arr[right] > pivot) {
             right++;
+            continue
         }
         if (arr[left] > pivot && arr[right] < pivot) {
             let temp = arr[left];
@@ -21,6 +23,9 @@ const randomNumNthSorting = (arr, index) => {
         left--;
         right++;
     }
+
+
+
     return arr
 };
 
