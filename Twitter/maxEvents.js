@@ -16,5 +16,5 @@ const maxEvents = (arrival, duration) => {
     return eventCount;
 }
 
-console.log(maxEvents([1, 3, 5], [2, 2, 2]))
+console.log(maxEvents([1, 3, 5], [20, 2, 2]))
 console.log(maxEvents([1, 3, 3, 5, 7], [2, 2, 1, 2, 1]))
