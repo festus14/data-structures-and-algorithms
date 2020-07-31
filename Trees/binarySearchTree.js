@@ -35,15 +35,15 @@ class BinarySearchTree {
   }
 
   lookup(value) {
-    let currentNode = this.root;
     if (!this.root) {
       return "This tree is empty";
     }
+    let currentNode = this.root;
     while (currentNode) {
       if (currentNode.value === value) {
         return currentNode;
       }
-      if (value < currentNode.value) {
+      else if (value < currentNode.value) {
         if (currentNode.left) {
           currentNode = currentNode.left;
         } else {
