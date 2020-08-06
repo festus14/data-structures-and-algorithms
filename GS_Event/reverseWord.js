@@ -1,9 +1,9 @@
-function reverseWord(s){
+function reverseWord(s) {
     return (s.split(' ')
-            .map(elem => elem.split('')
+        .map(elem => elem.split('')
             .reverse()
             .join(''))
-            .join(' '))
+        .join(' '))
 }
 
 console.log(reverseWord('hello world'))
