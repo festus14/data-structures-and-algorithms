@@ -1,4 +1,4 @@
-class Node {
+class LeaveNode {
   constructor(value) {
     this.value = value;
     this.left = null;
@@ -12,7 +12,7 @@ class BinarySearchTree {
   }
 
   insert(value) {
-    const leaveNode = new Node(value);
+    const leaveNode = new LeaveNode(value);
     if (!this.root) {
       return (this.root = leaveNode);
     }
@@ -42,8 +42,7 @@ class BinarySearchTree {
     while (currentNode) {
       if (currentNode.value === value) {
         return currentNode;
-      }
-      else if (value < currentNode.value) {
+      } else if (value < currentNode.value) {
         if (currentNode.left) {
           currentNode = currentNode.left;
         } else {
@@ -58,6 +57,23 @@ class BinarySearchTree {
       }
     }
   }
+
+  breadthFirstSearch = () => {
+    const list = [];
+    const queue = [];
+    queue.push(this.root);
+    while (queue.length > 0) {
+      let currentNode = queue.shift();
+      list.push(currentNode.value);
+      if (currentNode.left) {
+        queue.push(currentNode.left);
+      }
+      if (currentNode.right) {
+        queue.push(currentNode.right);
+      }
+    }
+    return list;
+  };
 }
 
 const Tree = new BinarySearchTree();
@@ -68,6 +84,7 @@ Tree.insert(20);
 Tree.insert(170);
 Tree.insert(15);
 Tree.insert(1);
-// console.warn(Tree.lookup(60));
+// console.log(Tree.lookup(60));
+// console.log(Tree.breadthFirstSearch());
 
-console.warn(Tree);
+console.log(Tree);

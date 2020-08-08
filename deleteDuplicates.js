@@ -9,7 +9,6 @@
 //       arr[index] = num;
 //     }
 //   }
-//   console.log(index);
 //   return arr.slice(0, index + 1);
 // };
 
