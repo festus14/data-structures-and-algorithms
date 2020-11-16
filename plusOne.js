@@ -11,7 +11,7 @@ const plusOne = (arr) => {
     arr[i] = 0;
     arr[i - 1] && (arr[i - 1] += 1);
   }
-  if (arr[0] === 0 || arr[0] === 0) {
+  if (arr[0] === 0) {
     arr[0] = 0;
     arr.unshift(1);
   }
@@ -19,3 +19,4 @@ const plusOne = (arr) => {
 };
 
 console.log(plusOne([9, 2, 9, 9]));
+console.log(plusOne([1, 3, 9]));
